@@ -1,0 +1,12 @@
+{% load account %}
+{% load socialaccount %}
+<header>
+  <div class="text-end fs-5 p-3 mb-2 bg-body text-body">
+{% if user.is_authenticated %}
+      <span class="border"><img src="{{ user.socialaccount_set.all.0.get_avatar_url }}"
+                                                      class="rounded-circle mb-3" style="width: 100px;" alt="avatar"></span>
+    <span class="badge rounded-pill text-bg-secondary">{{ user.first_name }} {{ user.last_name }}</span>
+  <a href="{% url 'account_logout' %}" class="badge rounded-pill bg-danger">Выход</a>
+{% endif %}
+  </div>
+</header>

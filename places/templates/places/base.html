@@ -7,8 +7,10 @@
     {% load static %}
     <link href="{% static 'places/css/bootstrap.min.css' %}" rel="stylesheet">
 </head>
-
 <body>
+{% block header %}
+{% include 'include/header.html' %}
+{% endblock %}
 {% block content %}
 {% endblock %}
 <script src="{% static 'places/js/bootstrap.min.js' %}"></script>
