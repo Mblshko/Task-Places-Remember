@@ -10,12 +10,13 @@
 ### Создаём виртуальное окружение
 `python -m venv venv`
 ### Устанавливаем зависимости
- `pip install -r requirements.txt`
+`pip install -r requirements.txt`
 ### Запускаем сервер
 `python manage.py runserver`
+
 ---
-### Полное условие задания находится в файле [Task-Places_Remember.pdf](https://github.com/Mblshko/WB-Tech-backend-internship/blob/master/Task_WB%E2%80%94Tech_InternBackend.pdf)
+### Полное условие задания находится в файле [Task-Places_Remember.pdf](https://github.com/Mblshko/Task-Places-Remember/blob/master/Task-Places_Remember.pdf)
 
 ___
 #### Примечание:
-В данный момент работаю над проектом.
+Проект в работе...
