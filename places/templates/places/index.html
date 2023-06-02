@@ -1,0 +1,14 @@
+{% extends 'places/base.html' %}
+{% block content %}
+<h1 class="text-center display-1">Запоминающиеся места</h1>
+<div class="p-3 mb-2 bg-light text-dark">
+    <p class="text-center fs-4">Привет! Здесь ты можешь хранить воспоминания о своих путешествиях.
+    Просто выбери место на карте, напиши название и расскажи о своих впечатлениях.</p>
+    <p class="text-center fs-4 fw-weight-bold">Но для начала давай познакомимся?</p>
+</div>
+<hr>
+{% load socialaccount %}
+<div class="text-center">
+<a class="btn btn-primary btn-lg" href="{% provider_login_url 'vk' %}" role="button">Войти с помощью VK</a>
+</div>
+{% endblock %}
