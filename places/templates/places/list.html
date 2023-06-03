@@ -2,8 +2,10 @@
 {% block content %}
 {% if places %}
     {% for place in places %}
+    <div class="">
         <p class="text-center fs-2 fw-weight-bold">{{ place.title }}
         <p class="text-center fs-3 fw-weight-bold">{{ place.description }}
+    </div>
     {% endfor %}
 {% else %}
     <p class="text-center fs-2 fw-weight-bold">УПС! У вас нет ни одного воспоминания =(

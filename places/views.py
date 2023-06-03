@@ -20,6 +20,11 @@ class PlacesView(ListView):
     context_object_name = 'places'
     extra_context = {'title': 'Воспоминания'}
 
+    def get(self, request, *args, **kwargs):
+        if not request.user.is_authenticated:
+            return redirect('home')
+        return super(PlacesView, self).get(request)
+
     def get_queryset(self):
         queryset = Places.objects.filter(author=self.request.user)
         return queryset
@@ -30,6 +35,11 @@ class AddPlace(CreateView):
     form_class = AddPlaceForm
     template_name = 'places/add.html'
     success_url = reverse_lazy('list_places')
+
+    def get(self, request, *args, **kwargs):
+        if not request.user.is_authenticated:
+            return redirect('home')
+        return super(AddPlace, self).get(request)
 
     def form_valid(self, form):
         form.instance.author = self.request.user
