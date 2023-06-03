@@ -1,7 +1,7 @@
 {% extends 'places/base.html' %}
 {% block content %}
 <div class="text-center">
-<form action="{% url 'list_places' %}" method="post">
+<form method="post">
     {% csrf_token %}
     {{ form.as_p }}
     <button type="submit" class="btn btn-success btn-lg">Добавить</button>
