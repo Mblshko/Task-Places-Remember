@@ -1,9 +1,10 @@
 {% extends 'places/base.html' %}
 {% block content %}
+{% include 'include/yandex_map.html' %}
 <div class="text-center">
-<form method="post">
+<form method="post" class="form-control form-control-lg" >
     {% csrf_token %}
     {{ form.as_p }}
-    <button type="submit" class="btn btn-success btn-lg">Добавить</button>
+    <button type="submit" class="btn btn-success btn-lg">Сохранить</button>
 </form></div>
 {% endblock %}
