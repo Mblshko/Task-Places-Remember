@@ -22,7 +22,7 @@ class PlacesView(ListView):
 
     def get(self, request, *args, **kwargs):
         if not request.user.is_authenticated:
-            return redirect('home')
+            return redirect('index')
         return super(PlacesView, self).get(request)
 
     def get_queryset(self):
@@ -38,7 +38,7 @@ class AddPlace(CreateView):
 
     def get(self, request, *args, **kwargs):
         if not request.user.is_authenticated:
-            return redirect('home')
+            return redirect('index')
         return super(AddPlace, self).get(request)
 
     def form_valid(self, form):
