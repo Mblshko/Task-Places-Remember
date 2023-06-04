@@ -2,9 +2,10 @@
 {% block content %}
 {% if places %}
     {% for place in places %}
-    <div class="">
-        <p class="text-center fs-2 fw-weight-bold">{{ place.title }}
-        <p class="text-center fs-3 fw-weight-bold">{{ place.description }}
+    <div class="text-center">
+        <p class="fs-2 fw-weight-bold">{{ place.title }}
+        <p class="fs-4 fw-weight-bold">{{ place.description }}
+        <hr>
     </div>
     {% endfor %}
 {% else %}
